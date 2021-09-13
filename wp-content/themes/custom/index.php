@@ -1,5 +1,4 @@
 <?php get_header(null, []) ?>
 
-Hi
-
+Hi me in the sus
 <?php get_footer(null, []) ?>
