@@ -3,6 +3,7 @@
 function wpt_custom_setup()
 {
 	add_theme_support('title-tag');
+	add_theme_support('post-thumbnails');
 }
 
 function wpt_custom_register_assets()
