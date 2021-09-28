@@ -17,5 +17,19 @@ function wpt_custom_register_assets()
 	wp_enqueue_script('bootstrap', null, [], false, true);
 }
 
+function wpt_custom_mav_class(array $classes): array
+{
+	$classes[] = 'nav-item';
+	return $classes;
+}
+
+function wpt_custom_mav_link_attrs(array $attr): array
+{
+	$attr["class"] = 'nav-link';
+	return $attr;
+}
+
 add_action('after_setup_theme', 'wpt_custom_setup');
 add_action('wp_enqueue_scripts',  "wpt_custom_register_assets");
+add_filter('nav_menu_css_class', "wpt_custom_mav_class");
+add_filter('nav_menu_link_attributes', "wpt_custom_mav_link_attrs");
